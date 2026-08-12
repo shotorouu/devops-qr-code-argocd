@@ -2,10 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 images:
-  - name: registry.gitlab.com/shotorouu/devops-qr-code/api
-    newName: 321
-  - name: registry.gitlab.com/shotorouu/devops-qr-code/front
-    newName: 123
+- name: registry.gitlab.com/shotorouu/devops-qr-code/api
+  newTag: d54c17bb5f73982c55b7ee973579f2254cc6c6e4
+- name: registry.gitlab.com/shotorouu/devops-qr-code/front
+  newTag: d54c17bb5f73982c55b7ee973579f2254cc6c6e4
 
 resources:
 - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.0/deploy/static/provider/baremetal/deploy.yaml
@@ -24,8 +24,3 @@ resources:
 
 patches:
 - path: ingress_nginx.yml
-images:
-- name: registry.gitlab.com/shotorouu/devops-qr-code/api
-  newTag: d54c17bb5f73982c55b7ee973579f2254cc6c6e4
-- name: registry.gitlab.com/shotorouu/devops-qr-code/front
-  newTag: d54c17bb5f73982c55b7ee973579f2254cc6c6e4
