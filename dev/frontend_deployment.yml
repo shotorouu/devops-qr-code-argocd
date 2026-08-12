@@ -24,10 +24,10 @@ spec:
         runAsGroup: 10001
         fsGroup: 10001
       imagePullSecrets:
-        - name: gitlab-registry-secret
+        - name: gitlab-repo-secret
       containers:
         - name: frontend
-          image: "${CI_REGISTRY_IMAGE}/front:${CI_COMMIT_SHA}"
+          image: registry.gitlab.com/shotorouu/devops-qr-code/front:tag
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:

@@ -36,10 +36,10 @@ spec:
             matchLabels:
               name: fastapi
       imagePullSecrets:
-        - name: gitlab-registry-secret
+        - name: gitlab-repo-secret
       containers:
         - name: fastapi
-          image: "${CI_REGISTRY_IMAGE}/api:${CI_COMMIT_SHA}"
+          image: registry.gitlab.com/shotorouu/devops-qr-code/api:tag
           imagePullPolicy: IfNotPresent
           ports:
             - name: api
