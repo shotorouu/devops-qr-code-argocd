@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://gitlab.com/shotorouu/devops-qr-code-argocd.git # Take from Clone With HTTPS!!!
+    targetRevision: HEAD
+    path: dev # Track that path in repository
+  destination:
+    server: https://kubernetes.default.svc # Internal ServiceName of API server (Also can be externally)
+    namespace: qrcode
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # Creates namespace written above if doesn't exist
+
+    automated:
+      selfHeal: true # Single source of truth - Git, manual changes will be overwritten
+      prune: true # By default (false) won't delete resources even with sync 
