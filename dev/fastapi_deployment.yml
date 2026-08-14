@@ -36,7 +36,7 @@ spec:
             matchLabels:
               name: fastapi
       imagePullSecrets:
-        - name: gitlab-repo-secret
+        - name: app-repo-secret
       containers:
         - name: fastapi
           image: registry.gitlab.com/shotorouu/devops-qr-code/api:tag

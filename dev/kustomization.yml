@@ -8,19 +8,15 @@ images:
   newTag: d54c17bb5f73982c55b7ee973579f2254cc6c6e4
 
 resources:
-- https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.0/deploy/static/provider/baremetal/deploy.yaml
 - configmap.yml
 - fastapi_deployment.yml
 - fastapi_service.yml
 - frontend_deployment.yml
 - frontend_service.yml
-- ingress.yml
+- httproute.yml
 - monitoring/prometheus-configmap.yml
 - monitoring/prometheus-rbac.yml
 - monitoring/prometheus-deployment.yml
 - monitoring/prometheus-service.yml
 - monitoring/grafana-deployment.yml
 - monitoring/grafana-service.yml
-
-patches:
-- path: ingress_nginx.yml
