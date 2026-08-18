@@ -40,6 +40,9 @@ spec:
       containers:
         - name: fastapi
           image: registry.gitlab.com/shotorouu/devops-qr-code/api:tag
+          envFrom:
+            - secretRef:
+                name: aws-creds
           imagePullPolicy: IfNotPresent
           ports:
             - name: api
