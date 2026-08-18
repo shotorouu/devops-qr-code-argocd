@@ -3,9 +3,9 @@ kind: Kustomization
 
 images:
 - name: registry.gitlab.com/shotorouu/devops-qr-code/api
-  newTag: d28c362176af1169b87020dc117f6dc9c7965ef6
+  newTag: 606ad04412ad535db4f3808f901eecb8977c6859
 - name: registry.gitlab.com/shotorouu/devops-qr-code/front
-  newTag: d28c362176af1169b87020dc117f6dc9c7965ef6
+  newTag: 606ad04412ad535db4f3808f901eecb8977c6859
 
 resources:
 - configmap.yml
