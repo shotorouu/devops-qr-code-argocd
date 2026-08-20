@@ -1,0 +1,21 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: local-ip-pool
+  namespace: metallb-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  addresses:
+  - 192.168.1.200-192.168.1.250
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: l2-adv
+  namespace: metallb-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  ipAddressPools:
+  - local-ip-pool

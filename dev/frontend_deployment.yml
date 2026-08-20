@@ -29,9 +29,6 @@ spec:
         - name: frontend
           image: registry.gitlab.com/shotorouu/devops-qr-code/front:tag
           imagePullPolicy: IfNotPresent
-          envFrom:
-            - configMapRef:
-                name: cm
           ports:
             - name: front
               containerPort: 3000

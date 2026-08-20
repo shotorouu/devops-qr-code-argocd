@@ -20,7 +20,7 @@ spec:
     matches:
     - path:
         type: PathPrefix
-        value: /api
+        value: /api/
     name: rule-0
   - backendRefs:
     - name: frontend

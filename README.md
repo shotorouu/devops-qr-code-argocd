@@ -4,4 +4,4 @@ kubectl create secret generic aws-creds --from-env-file=api/.env -n qrcode
 # An example of the api/.env file
 AWS_ACCESS_KEY="your-key"
 AWS_SECRET_KEY="your-secret-key"
-BUCKET_NAME="bucket-name"
+AWS_BUCKET_NAME="bucket-name"

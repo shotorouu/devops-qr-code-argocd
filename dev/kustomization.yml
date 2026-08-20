@@ -3,12 +3,11 @@ kind: Kustomization
 
 images:
 - name: registry.gitlab.com/shotorouu/devops-qr-code/api
-  newTag: 65ce4d752092b01efc2f66af0332bcb8fdd7b0f8
+  newTag: 329879ab7f2eae7494e582417215ca128b1ae0a4
 - name: registry.gitlab.com/shotorouu/devops-qr-code/front
-  newTag: 65ce4d752092b01efc2f66af0332bcb8fdd7b0f8
+  newTag: 329879ab7f2eae7494e582417215ca128b1ae0a4
 
 resources:
-- configmap.yml
 - fastapi_deployment.yml
 - fastapi_service.yml
 - frontend_deployment.yml
