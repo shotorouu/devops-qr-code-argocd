@@ -14,7 +14,7 @@
 
 A complete, production-ready **Cloud-Native & DevOps** portfolio project demonstrating a full lifecycle microservices deployment.Built on a self-hosted **Kubernetes (kubeadm) cluster** using modern **GitOps (ArgoCD)** principles, **Kubernetes Gateway API**, automated **GitLab CI/CD** pipelines and full-stack **Prometheus/Grafana** observability.
 
-**Take a look at my first (Application) related repository:**  
+**Take a look at my second (Application) related repository:**  
 **GitHub:** https://github.com/shotorouu/devops-qr-code/  
 **GitLab:** https://gitlab.com/shotorouu/devops-qr-code/  
 
@@ -380,5 +380,15 @@ To configure Grafana dashboards:
 1. Log into Grafana at http://<NODE_IP>:30031.
 2. Navigate to Connections > Data Sources and add Prometheus (http://prometheus-service.qrcode.svc.cluster.local:9090).
 3. Import community dashboards for Kubernetes container metrics (e.g. ID 15760 for cAdvisor / Node exporter metrics).
+
+## Images
+#### ArgoCD
+![ArgoCD](./images/argocd.webp)
+
+#### AWS S3 Bucket
+![S3](./images/s3.webp)
+
+#### Grafana cAdvisor Dashboard
+![Dashboard](./images/grafana.webp)
 
 ### This project is licensed under the MIT License⚖️.
